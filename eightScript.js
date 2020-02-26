@@ -8,4 +8,17 @@ do{
     counter++
 }while(!raining())
 
-console.error(`Fuiste a la tienda y no llovio durante ${counter} dias`)
+const singularOrPlural = (counter) =>{
+    var validation = (counter<=1)
+    var message = console.log(`It's ${validation}`)
+
+    return validation;
+} 
+
+if(singularOrPlural(counter)){
+    //Singular
+    console.error(`Fuiste a la tienda y solo llovio un día`)
+}else{
+    //Plural
+    console.error(`Fuiste a la tienda y no llovio durante ${counter} dias`)
+}
